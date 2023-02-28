@@ -11,8 +11,8 @@ function supportsWorkerType() {
   }
 }
 
-function prepareRunChecker({timerDelay}) {
-  lastEvent = Date.now()
+function prepareRunChecker({ timerDelay }) {
+  let lastEvent = Date.now()
   return {
     shouldRun() {
       const result = (Date.now() - lastEvent) > timerDelay

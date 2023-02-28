@@ -2,12 +2,12 @@ export default class View {
   #btnInit = document.querySelector('#init')
   #statusElement = document.querySelector('#status')
   #videoFrameCanvas = document.createElement('canvas')
-  #canvasContext = this.#videoFrameCanvas.getContext('2d', { willReadyFrequently: true })
+  #canvasContext = this.#videoFrameCanvas.getContext('2d', { willReadFrequently: true })
   #videoElement = document.querySelector('#video')
 
   getVideoFrame(video) {
     const canvas = this.#videoFrameCanvas
-    const [ width, height ] = [video.videowidth, video.videoheight]
+    const [width, height] = [video.videoWidth, video.videoHeight]
     canvas.width = width
     canvas.height = height
 

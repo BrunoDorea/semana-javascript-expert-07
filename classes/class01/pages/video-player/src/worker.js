@@ -13,9 +13,9 @@ tf.setBackend('webgl')
 const service = new Service({
   faceLandmarksDetection
 })
-console.log('tf model')
+console.log('loading tf model')
 await service.loadModel()
-console.log('tf model loaded')
+console.log('tf model loaded!')
 postMessage('READY')
 
 onmessage = async ({ data: video }) => {
